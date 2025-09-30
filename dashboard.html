@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - MatchWork</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>MatchWork</h1>
+    <nav>
+      <a href="index.html">Volver al inicio</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h2>Bienvenido a MatchWork</h2>
+    <h2>¡Donde conectamos talento con oportunidad!</h2>
+    <p>Sesión iniciada como: <span id="userEmail"></span></p>
+
+    <div id="opcionesEmpleador" class="opciones" style="display: none;">
+  <a class="button" href="oferta.html">
+    <i class="fas fa-plus-circle"></i>
+    <span>Cargar oferta</span>
+  </a>
+
+  <a class="button" href="ver_ofertas.html">
+    <i class="fas fa-list-alt"></i>
+    <span>Ver ofertas cargadas</span>
+  </a>
+
+  <a class="button" href="ver_postulaciones.html">
+    <i class="fas fa-briefcase"></i>
+    <span>Ver postulaciones</span>
+  </a>
+</div>
+
+<div id="opcionesTrabajador" class="opciones" style="display: none;">
+  <a class="button" href="buscar_contratantes.html">
+    <i class="fas fa-search"></i>
+    <span>Buscar contratantes</span>
+  </a>
+
+  <a class="button" href="mis_postulaciones.html">
+    <i class="fas fa-file-alt"></i>
+    <span>Mis postulaciones</span>
+  </a>
+</div>
+
+<!-- Botón cerrar sesión centrado -->
+<button class="logout-button" onclick="logout()">
+  <i class="fas fa-sign-out-alt"></i>
+  Cerrar sesión
+</button>
+
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

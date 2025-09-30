@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar Oferta - MatchWork</title>
+  <link rel="stylesheet" href="css/oferta.css">
+</head>
+<body>
+  <header class="header">
+    <h1>MatchWork</h1>
+    <nav>
+      <a href="dashboard.html">Volver al perfil</a>
+    </nav>
+  </header>
+
+<main class="dashboard">
+  <h2>Publicar nueva oferta de trabajo</h2>
+
+  <form id="ofertaForm" class="oferta-form">
+    
+    <label for="rubro">Oficio requerido:</label>
+    <select id="rubro" name="rubro" required>
+      <option value="">Seleccione un oficio</option>
+      <option value="albanil">Albañil</option>
+      <option value="plomero">Plomero</option>
+      <option value="electricista">Electricista</option>
+      <option value="jardinero">Jardinero</option>
+      <option value="pintor">Pintor</option>
+      <option value="limpieza">Limpieza</option>
+      <option value="lavado">Lavado de autos</option>
+      <option value="otros">Otros</option>
+    </select>
+
+    <label for="descripcion">Descripción del trabajo:</label>
+    <textarea id="descripcion" name="descripcion" rows="5" placeholder="Ej: Reparar filtración de agua en baño..." required></textarea>
+
+    <label for="ubicacion">Ubicación:</label>
+    <input type="text" id="ubicacion" name="ubicacion" placeholder="Ciudad o barrio" required>
+
+    <label for="observaciones">Observaciones (opcional):</label>
+    <textarea id="observaciones" name="observaciones" rows="3" placeholder="Ej: Necesito que lleve sus propias herramientas..."></textarea>
+
+    <button type="submit">Publicar oferta</button>
+  </form>
+</main>
+
+
+  <script src="js/oferta.js"></script>
+  <div id="toast" class="toast"></div>
+
+</body>
+</html>
