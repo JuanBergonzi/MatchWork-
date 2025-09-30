@@ -1,0 +1,149 @@
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+.header h1 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+.header nav a {
+  text-decoration: none;
+  background: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+.header nav a:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* === DASHBOARD === */
+.dashboard {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+/* === LISTA === */
+.postulaciones-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* === TARJETAS === */
+.form-box {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.form-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.form-box h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+.form-box p {
+  margin: 0.5rem 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* === ESTADO (badge) === */
+.estado {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.estado span {
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.estado .pendiente { background: #ffeaa7; color: #b57400; }
+.estado .aceptado { background: #55efc4; color: #006644; }
+.estado .rechazado { background: #fab1a0; color: #c0392b; }
+.estado .contratado { background: #74b9ff; color: #1e3a8a; }
+
+/* === BOTONES === */
+.btn-group {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-contratar {
+  background: #2ecc71;
+  color: #fff;
+}
+.btn-contratar:hover {
+  background: #27ae60;
+}
+.btn-eliminar {
+  background: #e74c3c;
+  color: #fff;
+}
+.btn-eliminar:hover {
+  background: #c0392b;
+}
+
+/* === NO POSTULACIONES === */
+.no-postulaciones {
+  text-align: center;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+/* === TOAST === */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 1rem;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}

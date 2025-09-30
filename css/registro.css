@@ -1,0 +1,201 @@
+/* === HEADER del registro === */
+.header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  .header nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .header nav a:hover {
+    color: #0056b3;
+  }
+  
+  /* === CONTENEDOR DEL FORMULARIO === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #4e73df, #1cc88a);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  max-width: 400px;
+  margin: 80px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  color: #333;
+  position: relative;
+  z-index: 10; /* Encima de iconos */
+}
+
+/* Iconos de fondo */
+.icono-profesion {
+  position: absolute;
+  font-size: 35px;  
+  color: rgba(255, 255, 255, 0.3); /* sutil */
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+/* Posiciones aleatorias para cubrir todo el fondo */
+.icono1 { top: 5%; left: 5%; }
+.icono2 { top: 10%; left: 50%; }
+.icono3 { top: 15%; left: 80%; }
+.icono4 { top: 20%; left: 20%; }
+.icono5 { top: 25%; left: 60%; }
+.icono6 { top: 30%; left: 10%; }
+.icono7 { top: 35%; left: 75%; }
+.icono8 { top: 40%; left: 35%; }
+.icono9 { top: 45%; left: 85%; }
+.icono10 { top: 50%; left: 15%; }
+.icono11 { top: 55%; left: 55%; }
+.icono12 { top: 60%; left: 5%; }
+.icono13 { top: 65%; left: 40%; }
+.icono14 { top: 70%; left: 70%; }
+.icono15 { top: 75%; left: 25%; }
+.icono16 { top: 80%; left: 50%; }
+.icono17 { top: 85%; left: 15%; }
+.icono18 { top: 90%; left: 60%; }
+.icono19 { top: 5%; left: 90%; }
+.icono20 { top: 10%; left: 25%; }
+.icono21 { top: 15%; left: 45%; }
+.icono22 { top: 20%; left: 70%; }
+.icono23 { top: 25%; left: 10%; }
+.icono24 { top: 30%; left: 55%; }
+.icono25 { top: 35%; left: 80%; }
+.icono26 { top: 40%; left: 20%; }
+.icono27 { top: 45%; left: 65%; }
+.icono28 { top: 50%; left: 5%; }
+.icono29 { top: 55%; left: 40%; }
+.icono30 { top: 60%; left: 75%; }
+.icono31 { top: 65%; left: 15%; }
+.icono32 { top: 70%; left: 50%; }
+.icono33 { top: 75%; left: 80%; }
+.icono34 { top: 80%; left: 20%; }
+.icono35 { top: 85%; left: 60%; }
+.icono36 { top: 90%; left: 35%; }
+.icono37 { top: 5%; left: 35%; }
+.icono38 { top: 10%; left: 70%; }
+.icono39 { top: 15%; left: 10%; }
+.icono40 { top: 20%; left: 50%; }
+.icono41 { top: 25%; left: 75%; }
+.icono42 { top: 30%; left: 30%; }
+.icono43 { top: 35%; left: 55%; }
+.icono44 { top: 40%; left: 10%; }
+.icono45 { top: 45%; left: 45%; }
+.icono46 { top: 50%; left: 70%; }
+.icono47 { top: 55%; left: 25%; }
+.icono48 { top: 60%; left: 50%; }
+.icono49 { top: 65%; left: 15%; }
+.icono50 { top: 70%; left: 80%; }
+
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  /* === FORMULARIO === */
+  form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  
+  form input,
+  form select {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    appearance: none; /* quita estilos nativos del sistema operativo */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+  }
+  
+  
+  form input:focus,
+  form select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* === BOTÓN === */
+  form button[type="submit"] {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* === MENSAJE E INICIO DE SESIÓN === */
+  #mensaje {
+    margin-top: 1rem;
+    color: #d9534f; /* rojo por defecto para errores */
+    text-align: center;
+  }
+  
+  .form-container p {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .form-container a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* === RESPONSIVE === */
+  @media (max-width: 600px) {
+    .form-container {
+      margin: 2rem 1rem;
+      padding: 1.5rem;
+    }
+  
+    .header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  

@@ -1,0 +1,137 @@
+/* === HEADER === */
+.header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+.header h1 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+.header nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.header nav a:hover {
+  color: #0056b3;
+}
+
+/* Contenedor principal */
+.dashboard {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.dashboard h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Contenedor de postulaciones */
+.postulaciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Tarjeta de postulación */
+.postulacion-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 5px solid #3498db;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.postulacion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Header de la tarjeta */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.card-header h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Estado de la postulación */
+.estado-badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+.estado-badge.pendiente {
+  background: #ffeaa7;
+  color: #b57400;
+}
+.estado-badge.contratado {
+  background: #55efc4;
+  color: #006644;
+}
+.estado-badge.rechazado {
+  background: #fab1a0;
+  color: #c0392b;
+}
+
+/* Texto de la tarjeta */
+.postulacion-card p {
+  margin: 0.5rem 0;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Botones */
+.card-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.card-buttons .btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  min-width: 120px;
+  transition: background 0.3s;
+}
+.btn-eliminar {
+  background: #e74c3c;
+  color: #fff;
+}
+.btn-eliminar:hover {
+  background: #c0392b;
+}
+.btn-chat {
+  background: #2ecc71;
+  color: #fff;
+}
+.btn-chat:hover {
+  background: #27ae60;
+}
+
+/* Mensaje cuando no hay postulaciones */
+.no-postulaciones {
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  margin-top: 2rem;
+}

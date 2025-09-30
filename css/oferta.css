@@ -1,0 +1,152 @@
+/* Fuente y base */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f6fb;
+  margin: 0;
+  color: #2c3e50;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+.header h1 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+.header nav a {
+  text-decoration: none;
+  background: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+.header nav a:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.dashboard {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+/* Formulario */
+.oferta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.oferta-form label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #34495e;
+}
+
+.oferta-form input,
+.oferta-form textarea,
+.oferta-form select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fafafa;
+}
+
+.oferta-form input:focus,
+.oferta-form textarea:focus,
+.oferta-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Grid para agrupar campos */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+/* Botón */
+.oferta-form button {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.oferta-form button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.oferta-form button:active {
+  transform: translateY(1px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding: 1.5rem;
+  }
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #4CAF50; /* verde éxito */
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}

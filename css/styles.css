@@ -1,0 +1,55 @@
+/* Página de Publicar Oferta */
+.oferta-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.oferta-container h1 {
+  margin-bottom: 1.5rem;
+  color: #0d6efd;
+}
+
+.oferta-container form {
+  text-align: left;
+}
+
+.oferta-container form input,
+.oferta-container form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.oferta-container a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.oferta-container a:hover {
+  text-decoration: underline;
+}
+
+.acciones button {
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.4rem 1rem;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.acciones button:nth-child(2) {
+  background-color: #e74c3c;
+}
