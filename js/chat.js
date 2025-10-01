@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const usuario = JSON.parse(localStorage.getItem("usuarioActual"));
+  if (!usuario) {
+    window.location.href = "login.html";
+    return;
+
+    
+  }
+
+  // === Nuevo: link dinámico según tipo de usuario ===
+  const link = document.getElementById("volverPostulaciones");
+  if (link) {
+    if (usuario.tipo === "trabajador") {
+      link.href = "mis_postulaciones.html";
+    } else if (usuario.tipo === "contratante") {
+      link.href = "ver_postulaciones.html";
+    }
+  }
+});
+
+
 const usuario = JSON.parse(localStorage.getItem("usuarioActual"));
 if (!usuario) {
   window.location.href = "login.html";

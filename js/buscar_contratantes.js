@@ -122,27 +122,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const form = card.querySelector(".postulacion-form");
       form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const mensaje = form.querySelector("textarea").value.trim();
-        if (!mensaje) return;
+  e.preventDefault();
+  const mensaje = form.querySelector("textarea").value.trim();
+  if (!mensaje) return;
 
-        const nuevaPostulacion = {
-          emailContratante: oferta.emailContratante,
-          nombreContratante: oferta.nombreContratante,
-          emailTrabajador: usuario.email,
-          nombreTrabajador: usuario.nombre,
-          rubro: usuario.rubro,
-          ubicacion: usuario.ubicacion,
-          mensaje,
-          estado: "pendiente",
-          ofertaId: oferta.id // <-- relacionamos la postulación con la oferta
-        };
+const nuevaPostulacion = {
+  emailContratante: oferta.emailContratante,
+  nombreContratante: oferta.nombreContratante,
+  emailTrabajador: usuario.email,
+  nombreTrabajador: usuario.nombre,
+  rubro: oferta.rubro,
+  ubicacion: oferta.ubicacion,
+  mensaje,
+  estado: "pendiente",
+  ofertaId: oferta.id // <-- clave para el chat
+};
 
-        postulaciones.push(nuevaPostulacion);
-        localStorage.setItem("postulaciones", JSON.stringify(postulaciones));
-        alert("✅ ¡Postulación enviada con éxito!");
-        renderizarTarjetas(); // actualizamos las ofertas disponibles
-      });
+
+  postulaciones.push(nuevaPostulacion);
+  localStorage.setItem("postulaciones", JSON.stringify(postulaciones));
+  alert("✅ ¡Postulación enviada con éxito!");
+  renderizarTarjetas(); // actualizamos las ofertas disponibles
+});
+
 
       container.appendChild(card);
     });

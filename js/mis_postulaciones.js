@@ -24,10 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const estado = p.estado || "pendiente";
 
       // Buscar la oferta asociada a esta postulación
-      const oferta = ofertas.find(o => 
-        o.emailContratante === p.emailContratante && 
-        o.titulo === p.titulo
-      ) || {};
+      const oferta = ofertas.find(o => o.id === p.ofertaId) || {};
+
 
       const div = document.createElement("div");
       div.classList.add("postulacion-card");
@@ -41,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Descripción:</strong> ${oferta.descripcion || "-"}</p>
         <p><strong>Observación:</strong> ${oferta.observaciones || "-"}</p>
         <p><strong>Contratante:</strong> ${oferta.nombreContratante || p.emailContratante}</p>
-        <p><strong>Mensaje enviado:</strong><br>${p.mensaje}</p>
+        <p><strong>Mensaje enviado:</strong> ${p.mensaje}</p>
         <div class="card-buttons">
           <button class="btn btn-eliminar" data-index="${index}">Eliminar</button>
           ${estado === "contratado" ? `<button class="btn btn-chat" data-index="${index}">Iniciar chat</button>` : ""}
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", (e) => {
         const index = e.target.dataset.index;
         const postulacion = misPostulaciones[index];
-        const chatId = `chat_${postulacion.emailContratante}_${postulacion.emailTrabajador}`;
+        const chatId = `chat_${postulacion.ofertaId}_${postulacion.emailContratante}_${postulacion.emailTrabajador}`;
         localStorage.setItem("chatActivo", chatId);
         window.location.href = "chat.html";
       });

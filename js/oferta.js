@@ -29,15 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const nuevaOferta = {
-      id: Date.now(), // ID único
-      rubro,
-      descripcion,
-      ubicacion,
-      observaciones: observaciones || null,
-      emailContratante: usuario.email,
-      nombreContratante: usuario.nombre
-    };
+const nuevaOferta = {
+  id: Date.now(), // ID único
+  rubro,
+  descripcion,
+  ubicacion,
+  observaciones: observaciones || null,
+  emailContratante: usuario.email,
+  nombreContratante: usuario.nombre
+};
+
 
     const ofertas = JSON.parse(localStorage.getItem("ofertas")) || [];
     ofertas.push(nuevaOferta);
